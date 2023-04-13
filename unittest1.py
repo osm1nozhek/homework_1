@@ -26,7 +26,6 @@ class TestParse(unittest.TestCase):
         res = Parse('https://example.com/path/to/page?age=18')
         self.assertEqual(res, {'age': '18'})
 
-
     def test_empty1(self):
         res = Parse('http://example.com/')
         self.assertEqual(res, {})
@@ -34,7 +33,6 @@ class TestParse(unittest.TestCase):
     def test_empty2(self):
         res = Parse('http://example.com/?')
         self.assertEqual(res, {})
-
 
     def test_combination1(self):
         res = Parse('https://example.com/path/to/page?name=ferret&age=18')
